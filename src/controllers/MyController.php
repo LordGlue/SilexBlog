@@ -2,25 +2,34 @@
 
 /**
  * Created by PhpStorm.
- * User: Glue
+ * User: App
  * Date: 14.04.14
  * Time: 21:48
  */
-namespace Glue;
-
-class MyController
-{
+namespace App {
 
 	/**
-	 * @return bool
+	 * Class MyController
+	 *
+	 * @package App
 	 */
-	function testFalse()
+	class MyController
 	{
-		return false;
-	}
 
-	function testString()
-	{
-		return 'My test string111';
+		/**
+		 * @return bool
+		 */
+		function actionFirst()
+		{
+			return false;
+		}
+
+		/**
+		 * @return string
+		 */
+		function actionSecond()
+		{
+			return 'My test string111';
+		}
 	}
 }

@@ -2,33 +2,32 @@
 
 /**
  * Created by PhpStorm.
- * User: Glue
+ * User: App
  * Date: 14.04.14
  * Time: 21:40
  */
 class ControllerTest extends PHPUnit_Framework_TestCase
 {
 	/**
-	 * @var \Glue\MyController
+	 * @var \App\MyController
 	 */
 	protected $category;
 
 	public function setUp()
 	{
-		require_once __DIR__ . '/../src/controllers/MyController.php';
 		parent::setUp();
-		$this->category = new \Glue\MyController();
+		$this->category = new \App\MyController();
 
 	}
 
 	public function testTitleIsRequired()
 	{
-		$this->assertFalse($this->category->testFalse(), 'Не удалось поличть false');
+		$this->assertFalse($this->category->actionFirst(), 'Не удалось получить false');
 	}
 
 	public function testString()
 	{
-		$this->assertEquals('My test string', $this->category->testString(), 'Error in string');
+		$this->assertEquals('My test string', $this->category->actionSecond(), 'Error in string');
 	}
 }
  
